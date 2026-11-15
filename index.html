@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OldSalt Map Shop</title>
+<meta name="description" content="OldSalt Map Shop: a collection of antique maps and prints, shown in a 17th-century harbour chart shop.">
+<meta name="robots" content="noindex, nofollow"><!-- remove this line when the site is ready to be found in search -->
+<meta name="theme-color" content="#120e0a">
+<meta property="og:title" content="OldSalt Map Shop">
+<meta property="og:description" content="Antique maps and prints in a 17th-century harbour chart shop.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="app">
+  <header class="bar">
+    <div class="sign"><b>OldSalt Map Shop</b><span>Sea-charts, maps and prints &middot; Harbour Row</span></div>
+    <nav class="tools" aria-label="Shop">
+      <button class="tool" id="btnLedger" type="button">The ledger</button>
+      <button class="tool" id="btnChest" type="button">Plan chest</button>
+      <button class="tool" id="btnLantern" type="button" aria-pressed="true">Lantern</button>
+    </nav>
+  </header>
+
+  <main class="room">
+    <div class="stage" id="stage">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+        <filter id="cgrain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.4" numOctaves="3" seed="9"/><feColorMatrix values="0 0 0 0 .05 0 0 0 0 .025 0 0 0 0 .01 2.6 0 0 0 -1"/></filter>
+      </defs></svg>
+      <div class="track" id="track">
+      <section class="view" id="v0" aria-label="The harbour wall">
+      <div class="roombg" data-bg="0"></div>
+
+      <!-- harbour window -->
+      <div class="window" aria-hidden="true">
+        <svg viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3c5f78"/><stop offset=".55" stop-color="#d9b988"/><stop offset="1" stop-color="#f1d6a0"/></linearGradient>
+            <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d5e69"/><stop offset="1" stop-color="#16262c"/></linearGradient>
+            <radialGradient id="sun" cx=".7" cy=".52" r=".4"><stop offset="0" stop-color="#fff3c8" stop-opacity=".9"/><stop offset="1" stop-color="#fff3c8" stop-opacity="0"/></radialGradient>
+            <pattern id="lead" width="50" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><path d="M0 30 L25 0 L50 30 L25 60 Z" fill="none" stroke="#17100a" stroke-width="3"/></pattern>
+            <symbol id="galleon" viewBox="0 0 120 130">
+              <g fill="#150f0b">
+                <path d="M8 96 Q60 120 112 96 L104 112 Q60 128 16 112 Z"/>
+                <path d="M2 88 L14 96 L106 96 L118 82 L110 90 L10 90 Z"/>
+                <rect x="58" y="22" width="3" height="76"/>
+                <rect x="34" y="40" width="3" height="58"/>
+                <rect x="86" y="46" width="3" height="52"/>
+                <path d="M40 28 H79 L76 56 H43 Z"/>
+                <path d="M16 46 H55 L52 74 H19 Z"/>
+                <path d="M67 52 H108 L105 78 H70 Z"/>
+                <path d="M59 22 L59 8 L76 14 L59 17 Z"/>
+              </g>
+              <g fill="#e6d2a4" opacity=".16"><path d="M44 30 H75 L73 54 H46 Z"/><path d="M20 48 H51 L49 72 H22 Z"/><path d="M71 54 H104 L102 76 H74 Z"/></g>
+            </symbol>
+          </defs>
+          <rect width="400" height="480" fill="url(#sky)"/>
+          <rect width="400" height="480" fill="url(#sun)"/>
+          <path d="M0 262 L60 238 L130 252 L200 232 L240 246 L400 228 L400 300 L0 300Z" fill="#4c5a5c" opacity=".55"/>
+          <g transform="translate(318 180)" fill="#2a2420"><path d="M0 62 L10 62 L8 18 L2 18Z"/><rect x="0" y="12" width="10" height="7"/><path d="M-2 12 L5 3 L12 12Z"/></g>
+          <rect y="290" width="400" height="190" fill="url(#sea)"/>
+          <g class="ship1"><g transform="translate(40 232) scale(.7)"><g class="bob"><use href="#galleon" width="120" height="130"/></g></g></g>
+          <g class="ship2"><g transform="translate(220 262) scale(.38)"><g class="bob" style="animation-delay:-2s"><use href="#galleon" width="120" height="130"/></g></g></g>
+          <g class="waves" stroke="#d8e6e0" stroke-opacity=".28" stroke-width="2" fill="none">
+            <path d="M-80 320 q25 -8 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0"/>
+            <path d="M-60 352 q30 -9 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0"/>
+            <path d="M-90 392 q35 -10 70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0"/>
+            <path d="M-50 436 q40 -11 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/>
+          </g>
+          <g stroke="#20170f" stroke-width="2" fill="none" stroke-linecap="round"><path class="gull" d="M90 120 q6 -7 12 0 q6 -7 12 0"/><path class="gull" style="animation-delay:-4s" d="M150 150 q5 -6 10 0 q5 -6 10 0"/></g>
+          <rect width="400" height="480" fill="url(#lead)" opacity=".55"/>
+          <rect x="196" width="8" height="480" fill="#1f140c"/>
+          <rect y="236" width="400" height="8" fill="#1f140c"/>
+        </svg>
+      </div>
+      <div class="sill"></div>
+
+      <div class="pieces" data-pieces="0"></div>
+      <svg class="shafts" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="shg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe2a8" stop-opacity=".30"/><stop offset="1" stop-color="#ffe2a8" stop-opacity="0"/></linearGradient></defs><polygon points="110,140 250,140 820,640 540,640" fill="url(#shg)"/><polygon points="280,140 420,140 1000,640 720,640" fill="url(#shg)"/></svg>
+      <div class="motes" id="motes" aria-hidden="true"></div>
+
+      <div class="shelf"></div>
+      <div class="shelf-items">
+        <svg viewBox="0 0 430 83" aria-hidden="true">
+          <g>
+            <rect x="12" y="52" width="92" height="12" rx="6" fill="#d9c595" transform="rotate(-3 58 58)"/>
+            <rect x="12" y="52" width="9" height="12" rx="4" fill="#a98f57" transform="rotate(-3 58 58)"/>
+            <rect x="26" y="38" width="86" height="13" rx="6" fill="#cdb67f"/>
+            <rect x="26" y="38" width="9" height="13" rx="4" fill="#a98f57"/>
+            <rect x="120" y="30" width="12" height="36" rx="5" fill="#d3bd88" transform="rotate(8 126 48)"/>
+          </g>
+          <g transform="translate(190 8)">
+            <rect x="0" y="0" width="34" height="5" fill="#8a6a2c"/><rect x="0" y="62" width="34" height="5" fill="#8a6a2c"/>
+            <path d="M5 5 H29 L19 31 L29 62 H5 L15 31 Z" fill="#e9d9ae" opacity=".25" stroke="#c39a45" stroke-width="1.5"/>
+            <path d="M9 56 H25 L17 44 Z" fill="#d9b365"/>
+          </g>
+          <g transform="translate(260 22) rotate(-8)">
+            <rect x="0" y="12" width="112" height="9" fill="#5a3a1a"/><rect x="0" y="12" width="12" height="9" fill="#c39a45"/><rect x="40" y="9" width="6" height="15" fill="#c39a45"/><rect x="104" y="10" width="14" height="13" fill="#c39a45"/>
+          </g>
+          <g transform="translate(386 6)"><path d="M0 60 Q26 76 52 60 L44 72 H8 Z" fill="#2a1c11"/><rect x="25" y="8" width="2" height="52" fill="#2a1c11"/><path d="M27 12 H48 L46 40 H27Z" fill="#e6d2a4" opacity=".8"/><path d="M25 18 H6 L8 44 H25Z" fill="#e6d2a4" opacity=".8"/></g>
+        </svg>
+      </div>
+      <svg class="astro" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="52" fill="none" stroke="#c39a45" stroke-width="3"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="#8a6a2c" stroke-width="1.5"/>
+        <g stroke="#c39a45" stroke-width="1.2">
+          <path d="M60 8 V112 M8 60 H112"/><path d="M23 23 L97 97 M97 23 L23 97" opacity=".55"/>
+        </g>
+        <path d="M60 14 L66 60 L60 106 L54 60Z" fill="#8a6a2c"/>
+        <circle cx="60" cy="60" r="5" fill="#f1d38a"/>
+      </svg>
+
+      <!-- counter -->
+      <div class="counter">
+        <svg class="ctex" viewBox="0 0 1600 270" preserveAspectRatio="none" aria-hidden="true"><rect width="1600" height="270" filter="url(#cgrain)"/></svg>
+        <div class="top-things">
+          <svg viewBox="0 0 1600 180" aria-hidden="true">
+            <!-- globe -->
+            <g transform="translate(560 6)">
+              <ellipse cx="60" cy="150" rx="46" ry="9" fill="rgba(0,0,0,.45)"/>
+              <rect x="56" y="110" width="8" height="38" fill="#3a2410"/><path d="M26 150 H94 L84 138 H36Z" fill="#3a2410"/>
+              <circle cx="60" cy="62" r="52" fill="#c9b27a"/>
+              <circle cx="60" cy="62" r="52" fill="none" stroke="#8a6a2c" stroke-width="3"/>
+              <g fill="none" stroke="#6b5226" stroke-width="1.3"><ellipse cx="60" cy="62" rx="22" ry="52"/><ellipse cx="60" cy="62" rx="44" ry="52"/><path d="M8 62 H112 M16 36 H104 M16 88 H104"/></g>
+              <path d="M38 40 q10 -10 22 -4 q4 12 -6 18 q-10 4 -14 -2Z M70 70 q12 -4 18 8 q-4 14 -14 10 q-8 -8 -4 -18Z" fill="#7d8b5a" opacity=".85"/>
+              <path d="M8 62 A52 52 0 0 1 112 62" fill="none" stroke="#3a2410" stroke-width="5" transform="rotate(-24 60 62)"/>
+            </g>
+            <!-- dividers -->
+            <g transform="translate(760 30) rotate(14 40 60)" fill="none" stroke="#c39a45" stroke-width="5" stroke-linecap="round">
+              <path d="M40 4 L16 122 M40 4 L66 120"/><circle cx="40" cy="8" r="7" fill="#8a6a2c"/><path d="M16 122 l-3 12 M66 120 l3 13" stroke-width="3"/>
+            </g>
+            <!-- inkwell + quill -->
+            <g transform="translate(1180 70)">
+              <path d="M10 70 L16 28 H44 L50 70Z" fill="#17120d"/><rect x="18" y="20" width="24" height="9" fill="#8a6a2c"/>
+              <path d="M32 24 Q70 -50 120 -62 Q96 -20 40 24Z" fill="#efe3c3"/><path d="M32 24 L120 -62" stroke="#8a7b58" stroke-width="2"/>
+            </g>
+            <!-- rolled charts -->
+            <g transform="translate(1260 54)">
+              <rect x="0" y="40" width="150" height="20" rx="10" fill="#d9c595"/><rect x="0" y="40" width="14" height="20" rx="7" fill="#b39a62"/>
+              <rect x="14" y="62" width="150" height="20" rx="10" fill="#cdb67f"/><rect x="14" y="62" width="14" height="20" rx="7" fill="#a98f57"/>
+            </g>
+          </svg>
+        </div>
+
+        <button class="ledger-btn" id="ledgerBook" type="button" aria-label="Open the ledger">
+          <svg viewBox="0 0 220 120" aria-hidden="true">
+            <path d="M8 98 L24 30 L112 40 L112 108Z" fill="#2c1a0e"/><path d="M212 98 L196 30 L112 40 L112 108Z" fill="#3b2412"/>
+            <path d="M18 92 L30 38 L108 46 L108 100Z" fill="#efe3c3"/><path d="M202 92 L190 38 L116 46 L116 100Z" fill="#e6d7b0"/>
+            <g stroke="#9c8a62" stroke-width="1.2"><path d="M36 54 L100 60 M36 64 L100 70 M36 74 L100 80 M36 84 L100 90 M198 54 L124 60 M198 64 L124 70 M198 74 L124 80"/></g>
+            <path d="M112 40 L112 108" stroke="#17100a" stroke-width="3"/>
+            <rect x="158" y="14" width="10" height="64" fill="#7a2418" transform="rotate(8 163 46)"/>
+          </svg>
+          <span class="tag">The ledger</span>
+        </button>
+
+        <svg class="candle" viewBox="0 0 40 120" aria-hidden="true">
+          <ellipse cx="20" cy="112" rx="18" ry="5" fill="rgba(0,0,0,.5)"/>
+          <rect x="11" y="52" width="18" height="60" fill="#efe3c3"/><rect x="11" y="52" width="6" height="60" fill="#d4c298"/>
+          <rect x="19" y="44" width="2" height="9" fill="#7a6a4c"/>
+          <g class="flame"><path d="M20 10 Q30 26 20 49 Q10 26 20 10Z" fill="#ffbf55"/><path d="M20 24 Q25 34 20 47 Q15 34 20 24Z" fill="#fff0b8"/></g>
+        </svg>
+
+        <div class="drawers" id="drawers">
+          <button class="drawer" type="button" data-drawer="all" aria-label="Open plan chest drawer: loose maps and prints"><span>Loose maps</span></button>
+          <button class="drawer" type="button" data-drawer="all" aria-label="Open plan chest drawer: views and prints"><span>Views</span></button>
+          <button class="drawer" type="button" data-drawer="all" aria-label="Open plan chest drawer: sea charts"><span>Sea charts</span></button>
+          <button class="drawer" type="button" data-drawer="all" aria-label="Open plan chest drawer: not yet scanned"><span>Awaiting scans</span></button>
+        </div>
+        <div class="hint">Select a map to examine it. Use the arrows at the sides to turn to the other walls.</div>
+      </div>
+
+      </section>
+
+      <section class="view" id="v1" aria-label="The chart wall">
+        <div class="roombg" data-bg="1"></div>
+        <div class="pieces" data-pieces="1"></div>
+        <svg class="sconce" style="left:1.2%;top:30%" viewBox="0 0 60 120" aria-hidden="true"><use href="#sconce"/></svg>
+        <svg class="sconce" style="left:94.8%;top:30%" viewBox="0 0 60 120" aria-hidden="true"><use href="#sconce"/></svg>
+        <svg class="furn" viewBox="0 0 1600 270" preserveAspectRatio="xMidYMax meet" aria-hidden="true" id="furn1"></svg>
+      </section>
+
+      <section class="view" id="v2" aria-label="The hearth wall">
+        <div class="roombg" data-bg="2"></div>
+        <div class="pieces" data-pieces="2"></div>
+        <svg class="hearth" id="hearth" viewBox="0 0 448 656" aria-hidden="true"></svg>
+        <div class="firelight" aria-hidden="true"></div>
+      </section>
+      </div>
+
+      <button class="arrow l" id="aL" type="button" aria-label="Turn left"><span>&lsaquo;</span></button>
+      <button class="arrow r" id="aR" type="button" aria-label="Turn right"><span>&rsaquo;</span></button>
+      <div class="plaque" id="plaque"><span id="wname"></span><span class="dots" id="dots"></span></div>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+        <symbol id="sconce" viewBox="0 0 60 120">
+          <rect x="26" y="0" width="8" height="20" fill="#2a1c11"/><path d="M8 24 H52 L46 34 H14Z" fill="#8a6a2c"/>
+          <path d="M14 34 H46 L42 96 H18Z" fill="#ffe7b0" fill-opacity=".22" stroke="#8a6a2c" stroke-width="2.5"/>
+          <path d="M18 96 H42 L46 106 H14Z" fill="#8a6a2c"/>
+          <g class="flame"><path d="M30 52 Q40 70 30 92 Q20 70 30 52Z" fill="#ffbf55"/><path d="M30 68 Q35 78 30 90 Q25 78 30 68Z" fill="#fff0b8"/></g>
+          <path d="M14 34 L18 96 M46 34 L42 96 M30 34 V96" stroke="#8a6a2c" stroke-width="1.2" opacity=".7"/>
+        </symbol>
+      </defs></svg>
+
+      <div class="dark"></div>
+      <div class="glow"></div>
+      <div class="vignette"></div>
+    </div>
+  </main>
+</div>
+
+<!-- Examine -->
+<div class="overlay" id="ovExamine" role="dialog" aria-modal="true" aria-labelledby="exTitle">
+  <div class="sheet">
+    <header><h2>Examining</h2><button class="close" type="button" data-close>Close</button></header>
+    <div class="examine">
+      <div class="viewer" id="viewer" aria-label="Zoomable map. Drag to move, scroll to zoom.">
+        <div class="inner" id="vInner"></div>
+        <div class="zoombar">
+          <button type="button" id="zIn" aria-label="Zoom in">+</button>
+          <button type="button" id="zOut" aria-label="Zoom out">&minus;</button>
+          <button type="button" id="zReset" aria-label="Reset view">&#8634;</button>
+        </div>
+        <div class="vhint" id="vHint">Scroll to zoom, drag to move</div>
+      </div>
+      <div class="card" id="card"></div>
+    </div>
+    <div class="pager"><button type="button" id="prev">&larr; Previous</button><span id="pos"></span><button type="button" id="next">Next &rarr;</button></div>
+  </div>
+</div>
+
+<!-- Ledger -->
+<div class="overlay" id="ovLedger" role="dialog" aria-modal="true" aria-labelledby="ledTitle">
+  <div class="sheet" style="max-width:980px">
+    <header><h2 id="ledTitle">The ledger</h2><button class="close" type="button" data-close>Close</button></header>
+    <div class="ledger">
+      <label for="q" class="note">Search by title, maker, place or year</label>
+      <input id="q" type="search" placeholder="Try Sanson, 1705, or Canada" autocomplete="off">
+      <div class="rows"><table>
+        <thead><tr><th scope="col">Title</th><th scope="col">Maker</th><th scope="col">Year</th><th scope="col">Scan</th></tr></thead>
+        <tbody id="ledRows"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+
+<!-- Plan chest -->
+<div class="overlay" id="ovChest" role="dialog" aria-modal="true" aria-labelledby="chestTitle">
+  <div class="sheet">
+    <header><h2 id="chestTitle">The plan chest</h2><button class="close" type="button" data-close>Close</button></header>
+    <div class="folios" id="folios"></div>
+  </div>
+</div>
+
+<script src="js/catalogue.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
